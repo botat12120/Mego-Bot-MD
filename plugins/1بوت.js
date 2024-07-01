@@ -1,4 +1,7 @@
 let handler = async (m, { conn }) => {
+    // التأكد من أن المرسل ليس البوت نفسه
+    if (m.sender === conn.user.jid) return;
+
     let user = global.db.data.users[m.sender];
     let name = conn.getName(m.sender);
     let taguser = '@' + m.sender.split("@s.whatsapp.net")[0];
