@@ -29,7 +29,7 @@ const texto1 = `اغــنيــههة 乂 يـوتـيـوب\n
 await conn.sendButton(m.chat, texto1, wm, res.videos[0].thumbnail, [
         ['الصوت 📀', `${usedPrefix}mp3 ${text}`],
         ['الفيديو 🎥', `${usedPrefix}mp4 ${text}`]
-  ], null, [['قناتي ⚡', `https://chat.whatsapp.com/EbzeqqSjqsMI2oDrjSdT3g`]], m)
+  ], null, [['قناتي ⚡', `https://whatsapp.com/channel/0029Vai5lsFCRs1tg6jJ152f`]], m)
           }
 
             if (command == "mp3") {
