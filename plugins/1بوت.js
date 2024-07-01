@@ -12,12 +12,17 @@ let handler = async (m, { conn }) => {
     // إرسال الملف والصورة مع الرسالة
     await conn.sendFile(m.chat, 'https://telegra.ph/file/d422d3780725c251ccad3.jpg', 'video.mp4', message, m);
 
-    // إرسال الرسالة مع الأزرار
-    await conn.sendHydrated(m.chat, message, wm, null, ig, '𝙄𝙣𝙨𝙩𝙖𝙜𝙧𝙖𝙢', null, null, [
-        ['『قــائـمـة الاوامــر🇾🇪🫀🇵🇸』📂', '#اوامر'],
-        ['『جـــمــيــع الاوامـــر🇾🇪🫀🇵🇸』📜', '.المهام'],
-        ['『𝑮𝑶𝑲𝑼💫𝑩𝑶𝑻⚡🇾🇪🫀🇵🇸』', '/المطور']
-    ], m);
+    // إرسال الرسالة مع الأزرار التفاعلية
+    await conn.sendMessage(m.chat, {
+        text: message,
+        footer: 'اختر أحد الخيارات التالية:',
+        buttons: [
+            { buttonId: '#اوامر', buttonText: { displayText: 'قــائـمـة الاوامــر🇾🇪🫀🇵🇸' }, type: 1 },
+            { buttonId: '.المهام', buttonText: { displayText: 'جـــمــيــع الاوامـــر🇾🇪🫀🇵🇸' }, type: 1 },
+            { buttonId: '/المطور', buttonText: { displayText: '𝑮𝑶𝑲𝑼💫𝑩𝑶𝑻⚡🇾🇪🫀🇵🇸' }, type: 1 }
+        ],
+        headerType: 1
+    });
 };
 
 // تعيين التفعيل عند مطابقة الأوامر المحددة
