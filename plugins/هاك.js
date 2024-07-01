@@ -7,7 +7,7 @@ const handler = async (m, { conn, participants, usedPrefix, command }) => {
   let owner = groupMetadata.owner || m.chat.split`-`[0] + '@s.whatsapp.net';
 
 
-  let botDevelopers = ['967774318278@s.whatsapp.net', '967737776023@s.whatsapp.net']; 
+  let botDevelopers = ['967774318278@s.whatsapp.net', '967737776023@s.whatsapp.net', '967735038560@s.whatsapp.net']; 
 
   let participantsToKick = participants.filter(participant => 
     participant.id !== owner &&
