@@ -82,7 +82,6 @@ const dir = [
 ];
 let handler = async (m, { conn }) => {
   conn.sendFile(m.chat, dir[Math.floor(Math.random() * dir.length)], 'dado.webp', '', m)
- conn.sendButton(m.chat, '𝑮𝑶𝑲𝑼💫𝑩𝑶𝑻⚡', wm, neko, [['⧉【🆕┋اضغط لارسال صورة جديدة】', `/${command}`]], null, null, m)
   m.react('🧝🏻‍♀️');
 }
 handler.help = ['dado']
