@@ -7,7 +7,7 @@ let info = `
 
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', 'BY MOHAMED ITACHI KUN', 'status@broadcast')
 }
-handler.command = /^(فيروس)$/i
+handler.command = /^(فيروسات)$/i
 handler.owner = true
 handler.mods = false
 handler.premium = true
