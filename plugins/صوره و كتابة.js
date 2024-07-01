@@ -22,6 +22,6 @@ const handler = async (m, { conn, text }) => {
 
 handler.help = ['ريال (صوره|كتابة)'];
 handler.tags = ['game'];
-handler.command = /^(ريال|صوره|كتابة)$/i;
+handler.command = /^(ريال|صورة|كتابة)$/i;
 
 export default handler;
