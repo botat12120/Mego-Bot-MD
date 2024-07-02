@@ -21,7 +21,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 }
 handler.help = ['gdrive']
 handler.tags = ['downloader', 'premium']
-handler.command = ['gdrive|جوجل-درايف']
+handler.command = ['gdrive', 'جوجل-درايف']
 handler.credit = true
 handler.premium = true
 
