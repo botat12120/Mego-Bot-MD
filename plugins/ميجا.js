@@ -8,12 +8,12 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
         const file = File.fromURL(text);
         await file.loadAttributes();
 
-        if (file.size >= 300000000) return m.reply('خطأ: حجم الملف كبير جداً (الحد الأقصى: 300 ميغابايت)');
+        if (file.size >= 300000000) return m.reply('Error: File size is too large (Maximum Size: 300MB)');
 
-        const downloadingMessage = `🌩️ جارٍ تنزيل الملف... يرجى الانتظار.`;
+        const downloadingMessage = `🌩️ Downloading file... Please wait.`;
         m.reply(downloadingMessage);
 
-        const caption = `*_تم تنزيل الملف بنجاح..._*\nالملف: ${file.name}\nالحجم: ${formatBytes(file.size)}`;
+        const caption = `*_Successfully downloaded..._*\nFile: ${file.name}\nSize: ${formatBytes(file.size)}`;
 
         const data = await file.downloadBuffer();
 
@@ -34,20 +34,20 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
         await conn.sendFile(m.chat, data, file.name, caption, m, null, { mimetype, asDocument: true });
 
     } catch (error) {
-        return m.reply(`خطأ: ${error.message}`);
+        return m.reply(`Error: ${error.message}`);
     }
 }
 
 handler.help = ["mega"]
 handler.tags = ["downloader"]
-handler.command = /^(ميجا)$/i
+handler.command = /^(ميغا)$/i
 export default handler
 
 function formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes';
 
     const k = 1024;
-    const sizes = ['بايت', 'كيلوبايت', 'ميجابايت', 'غيغابايت', 'تيرابايت'];
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
 
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
