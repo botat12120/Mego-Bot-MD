@@ -13,7 +13,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
             body: { text: `test`.trim() },
             footer: { text: `*𝑮𝑶𝑲𝑼-𝑩𝑶𝑻*`.trim() },  
             header: {
-                title: `*⎔⋅• ┏╼╃✦⊰⟦﷽⟧⊱✦╄╾┓ •⋅⎔*\n*⌝اهــلاً ╎ بــك فـي بـوت غــوكــو╎⌞*\n*━─╾╃⊱✦⊰🤖⊱✦⊰╄╼─━*\n> *🐉✬⃝╿↵ مرحــبـا ⌊@${mentionId.split('@')[0]}⌉*\n*── • ◈ • ──*\n> *🐉✬⃝╿حط قبل كل امر : ⌊ . ⌉*\n> *🐉✬⃝╿مـطـوري:https://wa.me/967735038560*\n> *🐉✬⃝╿الرابط:https://tiny.one/2e77c2bp*\n> *🐉✬⃝╿الـبــوت لـجــروبـات بـس*\n*· • • ━ ╃✦⊰ ⌝🔰⌞ ⊱✦╄ ━ • • ·*\n*⌝ ╎مـعـلـومـات الـبـوت╎⌞*\n*━─╾╃⊱✦⊰📋⊱✦⊰╄╼─━*\n*⧉【✨┋أسـم الـبـوت: 𝑮𝒐𝒌𝒖⚡】*\n*⧉【💻┋الـمـنـصـة:𝑯𝑬𝑹𝑶𝑲𝑼】*\n*⧉【⏰┋وقـت الـتـشـغـيـل:${uptime}】*\n*⧉【👥┋إجـمـالـي الـمـسـتخـدمـيـن:${rtotal}】*\n*· • • ━ ╃✦⊰ ⌝🔰⌞ ⊱✦╄ ━ • • ·*\n> *⧉【قـنـات الـبوت┋https://whatsapp.com/channel/0029Vai5lsFCRs1tg6jJ152f】*\n> *⧉【📢┋.ابلاغ】*\n> *هاذا الامر اذا حدث شيء للبوت.*\n*اختار من الازرار أسفل 👇*\n> *𝑮𝑶𝑲𝑼 𝑩𝑶𝑻.BY:𝜜𝑴𝑹𝑶 𝑲𝑯𝜜𝑳𝑰𝑫🇾🇪🫀🇵🇸*`,
+                title: `*⎔⋅• ┏╼╃✦⊰⟦ ﷽ ⟧⊱✦╄╾┓ •⋅⎔*\n*⌝اهــلاً ╎ بــك فـي بـوت غــوكــو╎⌞*\n*━─╾╃⊱✦⊰🤖⊱✦⊰╄╼─━*\n> *🐉✬⃝╿↵ مرحــبـا ⌊@${mentionId.split('@')[0]}⌉*\n*── • ◈ • ──*\n\n> *🐉✬⃝╿الـبــوت لـجــروبـات بـس*\n*· • • ━ ╃✦⊰ ⌝🔰⌞ ⊱✦╄ ━ •*\n*⌝ ╎مـعـلـومـات الـبـوت╎⌞*\n*━─╾╃⊱✦⊰📋⊱✦⊰╄╼─━*\n*⧉【✨┋أسـم الـبـوت: 𝑮𝒐𝒌𝒖⚡】*\n*⧉【💻┋الـمـنـصـة:𝑯𝑬𝑹𝑶𝑲𝑼】*\n*⧉【⏰┋وقـت الـتـشـغـيـل:${uptime}】*\n*⧉【👥┋إجـمـالـي الـمـسـتخـدمـيـن:${rtotal}】*\n*· • • ━ ╃✦⊰ ⌝🔰⌞ ⊱✦╄ ━ • • ·*\n> *⧉【📢┋.ابلاغ】*\n> *هاذا الامر اذا حدث شيء للبوت.*\n\n*اختار من الازرار أسفل 👇*\n\n> *𝑮𝑶𝑲𝑼 𝑩𝑶𝑻.*\n> *BY:𝜜𝑴𝑹𝑶 𝑲𝑯𝜜𝑳𝑰𝑫🇾🇪🫀🇵🇸*`,
                 subtitle: ``,
                 hasMediaAttachment: true,
                 imageMessage: joanimiimg.imageMessage,
@@ -27,7 +27,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                     sections: [
                                                                             {
                                                                                     title: 'List',
-                                                                        highlight_label: 'ON',
+                                                                        highlight_label: '',
                                                                         rows: [
                                                                                 {
                                                                                         header: '⧉【قــســـم الــجـروب🔕】',
@@ -38,7 +38,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                         ]
                                                                             },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: '',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الاعــضـاء👥】',
@@ -49,7 +49,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ]
                                                                   },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: '',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الانــمــي🔮】',
@@ -60,7 +60,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ]
                                     },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: '',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الــتـرفـيـة🎮】',
@@ -71,7 +71,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ]
                                         },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: '',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الايـديــت 🎞】',
@@ -82,7 +82,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ]
                                         },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: '',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســـم الـتـحـويلات♻️】',
@@ -93,7 +93,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ]
                                         },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: '',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الادوات ⚙️】',
@@ -104,7 +104,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ]
                                         },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: '',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الــديــن🕋】',
@@ -115,7 +115,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ]
                                         },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: '',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الذكـاء الاصطناعيّ🤖】',
@@ -126,7 +126,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ]
                                         },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: '',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الـتـحـمـيـلات📥】',
@@ -137,7 +137,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ] 
                                         },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: '',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الــبـنـك🏦】',
@@ -148,7 +148,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ] 
                                         },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: '',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الـمــطـور👑】',
@@ -159,7 +159,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ] 
                                         },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: '',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الـريـاكـشـنـات🪩】',
@@ -170,7 +170,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ] 
                                         },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: '',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الاصــوات🔊】',
@@ -181,7 +181,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ] 
                                         },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: '',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الـتـصـامـيـم⚡】',
@@ -192,7 +192,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ] 
                                         },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: 'VIP',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الــشــرح📜】',
@@ -203,7 +203,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                                                                                     ] 
                                         },
                                                                             {
-                                                                                    highlight_label: 'ON',
+                                                                                    highlight_label: 'VIP',
                                                                                     rows: [
                                                                                             {
                                                                                         header: '⧉【قــســم الــمــهــام📜】',
