@@ -10,32 +10,32 @@ const handler = async (m, {
   const id = 'ايميل';
 
   const lister = [
-    'create',
-    'message',
-    'delete',
+    'انشاء',
+    'رساله',
+    'حذف',
   ];
 
   const [feature, inputs, inputs_, inputs__, inputs___] = text.split(' ');
-  if (!lister.includes(feature)) return m.reply('*مثال:*\n' + usedPrefix + command + ' create\n\n*اختر نوعًا موجودًا*\n' + lister.map((v, index) => '  ○ ' + v).join('\n'));
+  if (!lister.includes(feature)) return m.reply('*مثال:*\n' + usedPrefix + command + ' انشاء\n\n*اختر نوعًا موجودًا*\n' + lister.map((v, index) => '  ○ ' + v).join('\n'));
 
   if (lister.includes(feature)) {
-    if (feature == 'create') {
+    if (feature == 'انشاء') {
       try {
         const eml = await random_mail();
         const timeDiff = new Date(eml[2]) - new Date();
         conn.dropmail[id] = [
-          await m.reply('*البريد الإلكتروني:*\n' + eml[0] + '\n\n' + '*الرقم التعريفي:*\n' + eml[1] + '\n\n*انتهاء الصلاحية:*\n' + msToTime(timeDiff) + '\n\n_مثال على استخدام *' + usedPrefix + command + ' message* لفحص صندوق الوارد_'),
+          await m.reply('*البريد الإلكتروني:*\n' + eml[0] + '\n\n' + '*الرقم التعريفي:*\n' + eml[1] + '\n\n*انتهاء الصلاحية:*\n' + msToTime(timeDiff) + '\n\n_مثال على استخدام *' + usedPrefix + command + ' رساله* لفحص صندوق الوارد_'),
           eml[0],
           eml[1],
           eml[2],
         ];
       } catch (e) {
-        await m.reply(`Error`);
+        await m.reply(`خطأ`);
       }
     }
 
-    if (feature == 'message') {
-      if (!conn.dropmail[id]) return m.reply('لا توجد رسائل، يرجى إنشاء بريد إلكتروني أولاً\nمثال: *' + usedPrefix + command + ' create*');
+    if (feature == 'رساله') {
+      if (!conn.dropmail[id]) return m.reply('لا توجد رسائل، يرجى إنشاء بريد إلكتروني أولاً\nمثال: *' + usedPrefix + command + ' انشاء*');
 
       try {
         const eml = await get_mails(conn.dropmail[id][2]);
@@ -49,12 +49,12 @@ const handler = async (m, {
 *التحميل* : ${v.downloadUrl}
    `.trim();
         }).filter((v) => v).join('\n\n________________________\n\n');
-        await m.reply(teks || '*فارغ*' + '\n\n_مثال *' + usedPrefix + command + ' delete* لحذف الرسائل الإلكترونية_');
+        await m.reply(teks || '*فارغ*' + '\n\n_مثال *' + usedPrefix + command + ' حذف* لحذف الرسائل الإلكترونية_');
       } catch (e) {
         await m.reply(`Error`);
       }
     }
-    if (feature == 'delete') {
+    if (feature == 'حذف') {
       if (!conn.dropmail[id]) return m.reply('لا يوجد بريد صالح');
 
       try {
